@@ -1,4 +1,4 @@
-package com.dgit.persistance;
+package com.dgit.persistence;
 
 import java.util.HashMap;
 
@@ -24,5 +24,11 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public void insert(UserVO vo) {
 		session.insert(namespace+".insert",vo);
+	}
+
+	@Override
+	public UserVO selectById(String id) {
+		// TODO Auto-generated method stub
+		return session.selectOne(namespace+".selectById",id);
 	}
 }

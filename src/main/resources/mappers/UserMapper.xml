@@ -9,4 +9,7 @@
 	<insert id="insert">
 		insert into user value(#{id},#{name},#{email},password(#{password}),#{phone})
 	</insert>
+	<select id="selectById" resultType="UserVO">
+		select * from user where id=#{id}
+	</select>
 </mapper>

@@ -6,15 +6,10 @@ import java.util.Date;
 public class PhotoVO {
 	private int pno;
 	private String id;
-	private String[] filename;
+	private String fullName;
 	private Date regdate;
 	public PhotoVO() {
 		super();
-	}
-	@Override
-	public String toString() {
-		return "PhotoVO [pno=" + pno + ", id=" + id + ", filename=" + Arrays.toString(filename) + ", regdate=" + regdate
-				+ "]";
 	}
 	public int getPno() {
 		return pno;
@@ -28,11 +23,16 @@ public class PhotoVO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String[] getFilename() {
-		return filename;
+
+	@Override
+	public String toString() {
+		return "PhotoVO [pno=" + pno + ", id=" + id + ", fullName=" + fullName + ", regdate=" + regdate + "]";
 	}
-	public void setFilename(String[] filename) {
-		this.filename = filename;
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
 	}
 	public Date getRegdate() {
 		return regdate;
