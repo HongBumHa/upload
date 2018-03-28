@@ -48,6 +48,7 @@ public class HomeController {
 	private UserService service;
 	
 	@Autowired
+	
 	private PhotoService photoService;
 
 	@Resource(name = "uploadPath")
